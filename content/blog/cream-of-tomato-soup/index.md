@@ -1,0 +1,52 @@
+---
+title: Cream of Tomato Soup
+date: '2019-09-01T14:15:04+00:00'
+description: "Anthony Bourdain's recipe from his book 'appetites'"
+tags: ["soup", "tomato", "vegetarian"]
+---
+
+## Ingredients
+
+- About 12 very ripe medium plum tomatoes
+- 3 Tablespoons unsalted butter or olive oil
+- 1 large yellow onion, peeled and finely chopper
+- 2 medium carrots, peeled and finely chopped
+- 2 ribs of celery, finely chopped
+- Salt and finely ground black pepper to taste
+- 1 large garlic clove, finely chopped
+- 1 (28-ounce) can peeled plum tomatoes
+- 3 cups of chicken stock
+- 1 bay leaf
+- 1 tablespoon of sugar
+- 1 tablespoon of apple cider vinegar
+- 1/4 cup heavy cream
+
+## Recipe
+
+Bring water to a boil in a large, heavy-bottom pot. Use a paring
+knife to cut an X into both ends of each tomato, Once the water
+boils, add the tomatoes to the pot, working in two batches
+if necessary to avoid overcrowding the pot or reducing the
+temperature too drastically. Allow the tomatoes to simmer in the
+water for 30 to 60 seconds, until the skin begins to loosen and peel
+away from the flesh. Using tongs, remove the tomatoes to the
+ice-water bath. Once they are cool enough to handle, peel off and
+discard the skin and coarsely chop the tomatoes.
+
+In a large, heavy-bottom stockpot, heat the butter until it is just
+shimmering, then add the onion, carrots, and celery. Stir over
+medium-high heat until they soften and begin to release their
+juices, about 2 minutes. Season with salt and pepper and stir in the
+garlic. Continue to cook, stirring frequently, until the vegetables
+have begun to brown, 7 to 10 minutes. Do not let them scorch or
+get dark brown.
+
+Stir in the chopped fresh tomatoes and the canned tomatoes and
+their juices, rinsing the inside of the can with a bit of water and
+to the pot. too. Once the mixture begins to bubble
+bav leaf. sugar, and vinegar. Bring to a boil,
+and let cook for about 30 minutes, uncovered
+the pot front the heat, remove and discard the bay leaf.
+
+Puree in the blender. Stir in the cream and adjust the
+salt, pepper, sugar, and vinegar as desired.

@@ -37,6 +37,18 @@ class BlogPostTemplate extends React.Component {
             >
               {post.frontmatter.date}
             </p>
+            <h2>Tags</h2>
+            <ul
+              style={{
+                listStyle: "none",
+                display: "flex",
+                flexDirection: "row",
+              }}
+            >
+              {this.props.data.markdownRemark.frontmatter.tags.map(tag => {
+                return <li>{`${tag},`}</li>
+              })}
+            </ul>
           </header>
           <section dangerouslySetInnerHTML={{ __html: post.html }} />
           <hr
@@ -98,6 +110,7 @@ export const pageQuery = graphql`
         title
         date(formatString: "MMMM DD, YYYY")
         description
+        tags
       }
     }
   }
