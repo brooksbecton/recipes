@@ -6,6 +6,10 @@ Wordpress2016.overrideThemeStyles = () => {
     "a.gatsby-resp-image-link": {
       boxShadow: `none`,
     },
+    "h1,h2,h3,h4,h5": {
+      fontFamily: "Josefin Slab",
+      fontStyle: "italic",
+    },
   }
 }
 

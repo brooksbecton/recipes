@@ -22,32 +22,39 @@ class BlogPostTemplate extends React.Component {
           <header>
             <h1
               style={{
-                marginTop: rhythm(1),
+                ...scale(0.8),
+                marginBottom: rhythm(1.5),
                 marginBottom: 0,
               }}
             >
               {post.frontmatter.title}
             </h1>
-            <p
-              style={{
-                ...scale(-1 / 5),
-                display: `block`,
-                marginBottom: rhythm(1),
-              }}
-            >
-              {post.frontmatter.date}
-            </p>
-            <h2>Tags</h2>
+
             <ul
               style={{
                 listStyle: "none",
                 display: "flex",
                 flexDirection: "row",
+                margin: 0,
               }}
             >
-              {this.props.data.markdownRemark.frontmatter.tags.map(tag => {
-                return <li>{`${tag},`}</li>
-              })}
+              {this.props.data.markdownRemark.frontmatter.tags.map(
+                (tag, index, array) => {
+                  return (
+                    <li
+                      key={tag}
+                      style={{
+                        border: "none",
+                        paddingLeft: index === 0 ? 0 : 10,
+                      }}
+                    >
+                      <Link to={`tags/${tag}`}>{` ${tag}${
+                        index === array.length - 1 ? "" : ", "
+                      } `}</Link>
+                    </li>
+                  )
+                }
+              )}
             </ul>
           </header>
           <section dangerouslySetInnerHTML={{ __html: post.html }} />
@@ -56,37 +63,7 @@ class BlogPostTemplate extends React.Component {
               marginBottom: rhythm(1),
             }}
           />
-          <footer>
-            <Bio />
-          </footer>
         </article>
-
-        <nav>
-          <ul
-            style={{
-              display: `flex`,
-              flexWrap: `wrap`,
-              justifyContent: `space-between`,
-              listStyle: `none`,
-              padding: 0,
-            }}
-          >
-            <li>
-              {previous && (
-                <Link to={previous.fields.slug} rel="prev">
-                  ← {previous.frontmatter.title}
-                </Link>
-              )}
-            </li>
-            <li>
-              {next && (
-                <Link to={next.fields.slug} rel="next">
-                  {next.frontmatter.title} →
-                </Link>
-              )}
-            </li>
-          </ul>
-        </nav>
       </Layout>
     )
   }
