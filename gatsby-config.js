@@ -58,13 +58,13 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `Gatsby Starter Blog`,
-        short_name: `GatsbyJS`,
+        name: `Recipes`,
+        short_name: `Recipes`,
         start_url: `/`,
         background_color: `#ffffff`,
-        theme_color: `#663399`,
-        display: `minimal-ui`,
-        icon: `content/assets/gatsby-icon.png`,
+        theme_color: `#3F4868`,
+        display: `fullscreen`,
+        icon: `content/assets/icon.png`,
       },
     },
     `gatsby-plugin-offline`,

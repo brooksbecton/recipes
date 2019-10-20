@@ -12,6 +12,7 @@ tags: ["pancakes", "breakfast", "vegetarian"]
 - 2 teaspoons baking powder
 - 1/4 teaspoon salt
 - 1 cup milk
+- 1 egg
 - 2 tablespoons vegetable oil 
 - 2 ripe bananas, mashed
 
