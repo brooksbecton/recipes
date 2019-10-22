@@ -20,8 +20,8 @@ class BlogIndex extends React.Component {
           {posts.slice(0, 9).map(({ node }) => {
             const title = node.frontmatter.title || node.fields.slug
             return (
-              <li>
-                <article key={node.fields.slug}>
+              <li key={node.fields.slug}>
+                <article>
                   <header>
                     <h3 style={{ margin: 0, marginBottom: rhythm(0.5) }}>
                       <Link style={{ boxShadow: `none` }} to={node.fields.slug}>
@@ -34,16 +34,16 @@ class BlogIndex extends React.Component {
             )
           })}
         </ul>
-        <Link style={{ boxShadow: `none` }} to={`tags/`}>
+        <Link style={{ boxShadow: `none` }} to={`/tags/`}>
           <h2>Tags</h2>
         </Link>
         <ul>
           {tags.slice(0, 9).map(({ fieldValue, totalCount }) => {
             const tag = fieldValue
-            const tagPath = `tags/${tag}`
+            const tagPath = `/tags/${tag}`
             return (
-              <li>
-                <article key={tagPath}>
+              <li key={tagPath}>
+                <article>
                   <header>
                     <h3 style={{ margin: 0, marginBottom: rhythm(0.5) }}>
                       <Link style={{ boxShadow: `none` }} to={tagPath}>
