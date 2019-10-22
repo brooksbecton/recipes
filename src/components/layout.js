@@ -1,6 +1,5 @@
 import React from "react"
 import { rhythm } from "../utils/typography"
-import { navigate } from "@reach/router"
 
 class Layout extends React.Component {
   render() {
