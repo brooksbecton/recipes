@@ -1,51 +1,60 @@
 import React from "react"
 import { rhythm } from "../utils/typography"
 
-class Layout extends React.Component {
-  render() {
-    const { children } = this.props
-
-    return (
+const Layout = ({ children }) => {
+  return (
+    <div
+      style={{
+        marginBottom: rhythm(2),
+      }}
+    >
       <div
         style={{
-          marginBottom: rhythm(2),
+          marginLeft: `auto`,
+          marginRight: `auto`,
+          maxWidth: rhythm(24),
+          padding: `0 ${rhythm(1.5)}`,
         }}
       >
-        <div
+        <main>{children}</main>
+      </div>
+      <div>
+        <footer
           style={{
-            marginLeft: `auto`,
-            marginRight: `auto`,
-            maxWidth: rhythm(24),
-            padding: `0 ${rhythm(1.5)}`,
+            color: "white",
+            display: "flex",
+            position: "fixed",
+            alignContent: "center",
+            justifyContent: "space-between",
+            backgroundColor: "#3F4868",
+            width: "100vw",
+            height: "50px",
+            bottom: 0,
           }}
         >
-          <main>{children}</main>
-        </div>
-        <div>
-          <footer
+          <button
             style={{
               color: "white",
-              display: "flex",
-              position: "fixed",
-              alignContent: "center",
-              backgroundColor: "#3F4868",
-              width: "100vw",
-              height: "50px",
-              bottom: 0,
-              padding: "10px",
+              backgroundColor: "transparent",
+              border: 0,
             }}
+            onClick={() => window.history.back()}
           >
+            Back
+          </button>
+
+          <div style={{ paddingTop: "8px" }}>
+            <input type="text" name="search" placeholder="Search" />
             <button
-              style={{ color: "white" }}
-              onClick={() => window.history.back()}
+              style={{ backgroundColor: "white", height: "34px", border: 0 }}
             >
-              Back
+              X
             </button>
-          </footer>
-        </div>
+          </div>
+        </footer>
       </div>
-    )
-  }
+    </div>
+  )
 }
 
 export default Layout
