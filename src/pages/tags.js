@@ -17,8 +17,8 @@ const TagsPage = ({
 }) => (
   <Layout location={location} title={title}>
     <SEO title="tags" />
-    <div>
-      <h1>Tags</h1>
+    <div className="nes-container with-title">
+      <h1 className="title">Tags</h1>
       <ul>
         {group.map(tag => (
           <li key={tag.fieldValue}>

@@ -14,47 +14,70 @@ class BlogIndex extends React.Component {
     return (
       <Layout location={this.props.location} title={siteTitle}>
         <SEO title="All posts" />
-        <h2>Recent Recipes</h2>
-        <ul>
-          {posts.slice(0, 9).map(({ node }) => {
-            const title = node.frontmatter.title || node.fields.slug
-            return (
-              <li key={node.fields.slug}>
-                <article>
-                  <header>
-                    <h3 style={{ margin: 0, marginBottom: '3%' }}>
-                      <Link style={{ boxShadow: `none` }} to={node.fields.slug}>
-                        {title}
-                      </Link>
-                    </h3>
-                  </header>
-                </article>
-              </li>
-            )
-          })}
-        </ul>
-        <Link style={{ boxShadow: `none` }} to={`/tags/`}>
-          <h2>Tags</h2>
-        </Link>
-        <ul>
-          {tags.slice(0, 9).map(({ fieldValue, totalCount }) => {
-            const tag = fieldValue
-            const tagPath = `/tags/${tag}`
-            return (
-              <li key={tagPath}>
-                <article>
-                  <header>
-                    <h3 style={{ margin: 0, marginBottom: '3%' }}>
-                      <Link style={{ boxShadow: `none` }} to={tagPath}>
-                        {tag} ({totalCount})
-                      </Link>
-                    </h3>
-                  </header>
-                </article>
-              </li>
-            )
-          })}
-        </ul>
+
+        <div
+          className="nes-container with-title"
+          style={{ marginBottom: "60px" }}
+        >
+          <h2 className="title">Recent Recipes</h2>
+          <ul>
+            {posts.slice(0, 9).map(({ node }) => {
+              const title = node.frontmatter.title || node.fields.slug
+              return (
+                <li key={node.fields.slug}>
+                  <article>
+                    <header>
+                      <h3 style={{ margin: 0, marginBottom: "3%" }}>
+                        <Link
+                          style={{ boxShadow: `none` }}
+                          to={node.fields.slug}
+                        >
+                          {title}
+                        </Link>
+                      </h3>
+                    </header>
+                  </article>
+                </li>
+              )
+            })}
+          </ul>
+        </div>
+        <div
+          className="nes-container with-title"
+          style={{ marginBottom: "60px" }}
+        >
+          <h2 className="title">Tags</h2>
+          <ul>
+            {tags.slice(0, 9).map(({ fieldValue, totalCount }) => {
+              const tag = fieldValue
+              const tagPath = `/tags/`
+              return (
+                <li key={tagPath}>
+                  <article>
+                    <header>
+                      <h3 style={{ margin: 0, marginBottom: "3%" }}>
+                        <Link style={{ boxShadow: `none` }} to={tagPath}>
+                          {tag} ({totalCount})
+                        </Link>
+                      </h3>
+                    </header>
+                  </article>
+                </li>
+              )
+            })}
+            <li>
+              <article>
+                <header>
+                  <h3 style={{ margin: 0, marginBottom: "3%" }}>
+                    <Link style={{ boxShadow: `none` }} to="tags">
+                      All Tags ({tags.length}) 
+                    </Link>
+                  </h3>
+                </header>
+              </article>
+            </li>
+          </ul>
+        </div>
       </Layout>
     )
   }
