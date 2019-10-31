@@ -1,20 +1,21 @@
 import React from "react"
 import { Link } from "gatsby"
-import { rhythm } from "../utils/typography"
 
+import './layout.css'
 const Layout = ({ children }) => {
   return (
     <div
       style={{
-        marginBottom: rhythm(2),
+        marginBottom: "2%",
       }}
     >
       <div
         style={{
           marginLeft: `auto`,
           marginRight: `auto`,
-          maxWidth: rhythm(24),
-          padding: `0 ${rhythm(1.5)}`,
+          padding: '5%',
+          marginBottom: '50px'
+
         }}
       >
         <main>{children}</main>
@@ -25,10 +26,11 @@ const Layout = ({ children }) => {
             color: "white",
             display: "flex",
             position: "fixed",
+            flexDirection: 'row-reverse',
             justifyContent: "space-between",
             backgroundColor: "#3F4868",
             width: "100vw",
-            height: "50px",
+            height: "60px",
             bottom: 0,
           }}
         >
@@ -38,8 +40,7 @@ const Layout = ({ children }) => {
               alignSelf: "center",
               alignContent: "center",
               fontSize: "29px",
-              paddingLeft: "15px",
-
+              paddingRight: "15px",
               justifyContent: "space-between",
             }}
           >
@@ -64,9 +65,13 @@ const Layout = ({ children }) => {
               </span>
             </button>
           </div>
-
-          <div style={{ alignSelf: "center" }}>
-            <input type="text" name="search" placeholder="Search" />
+          <div className='nes-field' style={{ alignSelf: "center" }}>
+            <input
+              className="nes-input"
+              type="text"
+              name="search"
+              placeholder="Search"
+            />
           </div>
         </footer>
       </div>

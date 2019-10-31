@@ -3,7 +3,6 @@ import { Link, graphql } from "gatsby"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-import { rhythm } from "../utils/typography"
 
 class BlogIndex extends React.Component {
   render() {
@@ -23,7 +22,7 @@ class BlogIndex extends React.Component {
               <li key={node.fields.slug}>
                 <article>
                   <header>
-                    <h3 style={{ margin: 0, marginBottom: rhythm(0.5) }}>
+                    <h3 style={{ margin: 0, marginBottom: '3%' }}>
                       <Link style={{ boxShadow: `none` }} to={node.fields.slug}>
                         {title}
                       </Link>
@@ -45,7 +44,7 @@ class BlogIndex extends React.Component {
               <li key={tagPath}>
                 <article>
                   <header>
-                    <h3 style={{ margin: 0, marginBottom: rhythm(0.5) }}>
+                    <h3 style={{ margin: 0, marginBottom: '3%' }}>
                       <Link style={{ boxShadow: `none` }} to={tagPath}>
                         {tag} ({totalCount})
                       </Link>
