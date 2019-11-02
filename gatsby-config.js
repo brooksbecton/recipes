@@ -11,6 +11,13 @@ module.exports = {
   },
   plugins: [
     {
+      resolve: `gatsby-plugin-mdx`,
+      options: {
+        extensions: [".mdx", ".md"],
+      },
+    },
+    "gatsby-plugin-typescript",
+    {
       resolve: `gatsby-source-filesystem`,
       options: {
         path: `${__dirname}/content/blog`,
@@ -69,6 +76,5 @@ module.exports = {
     },
     `gatsby-plugin-offline`,
     `gatsby-plugin-react-helmet`,
-    
   ],
 }

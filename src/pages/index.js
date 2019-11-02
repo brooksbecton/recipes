@@ -8,8 +8,8 @@ class BlogIndex extends React.Component {
   render() {
     const { data } = this.props
     const siteTitle = data.site.siteMetadata.title
-    const posts = data.allMarkdownRemark.edges
-    const tags = data.allMarkdownRemark.group || []
+    const posts = data.allMdx.edges
+    const tags = data.allMdx.group || []
 
     return (
       <Layout location={this.props.location} title={siteTitle}>
@@ -70,7 +70,7 @@ class BlogIndex extends React.Component {
                 <header>
                   <h3 style={{ margin: 0, marginBottom: "3%" }}>
                     <Link style={{ boxShadow: `none` }} to="tags">
-                      All Tags ({tags.length}) 
+                      All Tags ({tags.length})
                     </Link>
                   </h3>
                 </header>
@@ -92,7 +92,25 @@ export const pageQuery = graphql`
         title
       }
     }
-
+    allMdx(sort: { fields: [frontmatter___date], order: DESC }) {
+      group(field: frontmatter___tags) {
+        fieldValue
+        totalCount
+      }
+      edges {
+        node {
+          excerpt
+          fields {
+            slug
+          }
+          frontmatter {
+            date(formatString: "MMMM DD, YYYY")
+            title
+            description
+          }
+        }
+      }
+    }
     allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
       group(field: frontmatter___tags) {
         fieldValue

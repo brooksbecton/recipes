@@ -1,12 +1,13 @@
 import React from "react"
 import { Link, graphql } from "gatsby"
+import { MDXRenderer } from "gatsby-plugin-mdx"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 
 class BlogPostTemplate extends React.Component {
   render() {
-    const post = this.props.data.markdownRemark
+    const post = this.props.data.mdx
     const siteTitle = this.props.data.site.siteMetadata.title
 
     return (
@@ -17,40 +18,33 @@ class BlogPostTemplate extends React.Component {
         />
         <article>
           <header>
-            <h1
-           
-            >
-              {post.frontmatter.title}
-            </h1>
+            <h1>{post.frontmatter.title}</h1>
 
             <ul
               style={{
                 listStyle: "none",
                 display: "flex",
-                flexDirection: "row",
+                flexDirection: "column",
                 margin: 0,
               }}
             >
-              {this.props.data.markdownRemark.frontmatter.tags.map(
-                (tag, index, array) => {
-                  return (
-                    <li
-                      key={tag}
-                      style={{
-                        border: "none",
-                        paddingLeft: index === 0 ? 0 : 10,
-                      }}
-                    >
-                      <Link to={`tags/${tag}`}>{` ${tag}${
-                        index === array.length - 1 ? "" : ", "
-                      } `}</Link>
-                    </li>
-                  )
-                }
-              )}
+              {this.props.data.mdx.frontmatter.tags.map((tag, index, array) => {
+                return (
+                  <li
+                    key={tag}
+                    style={{
+                      border: "none",
+                    }}
+                  >
+                    <Link to={`tags/${tag}`}>{` ${tag}${
+                      index === array.length - 1 ? "" : ", "
+                    } `}</Link>
+                  </li>
+                )
+              })}
             </ul>
           </header>
-          <section dangerouslySetInnerHTML={{ __html: post.html }} />
+          <MDXRenderer>{post.body}</MDXRenderer>
         </article>
       </Layout>
     )
@@ -67,10 +61,10 @@ export const pageQuery = graphql`
         author
       }
     }
-    markdownRemark(fields: { slug: { eq: $slug } }) {
+    mdx(fields: { slug: { eq: $slug } }) {
       id
       excerpt(pruneLength: 160)
-      html
+      body
       frontmatter {
         title
         date(formatString: "MMMM DD, YYYY")
