@@ -20,6 +20,7 @@ class BlogPostTemplate extends React.Component {
           <header>
             <h1>{post.frontmatter.title}</h1>
 
+            <h2>Tags</h2>
             <ul
               style={{
                 listStyle: "none",

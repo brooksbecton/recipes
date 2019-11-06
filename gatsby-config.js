@@ -67,7 +67,7 @@ module.exports = {
       options: {
         name: `Recipes`,
         short_name: `Recipes`,
-        start_url: `/`,
+        start_url: `/recipes/`,
         background_color: `#ffffff`,
         theme_color: `#3F4868`,
         display: `fullscreen`,

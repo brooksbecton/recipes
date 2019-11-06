@@ -49,7 +49,7 @@ const Layout = ({ children }) => {
           bottom: 0,
           width: "100%",
           margin: 0,
-          padding: isShowingSearch ? 5: 16,
+          padding: isShowingSearch ? 5 : 16,
         }}
       >
         {isShowingSearch ? (
@@ -79,20 +79,22 @@ const Layout = ({ children }) => {
                 justifyContent: "space-between",
               }}
             >
-              <Link
-                style={{
-                  boxShadow: 0,
-                  color: "white",
-                  textDecoration: "none",
-                  marginRight: 20,
-                }}
-                to="/"
-              >
-                HOME
-              </Link>
-              <FooterButton onClick={() => window.history.back()}>
-                BACK
-              </FooterButton>
+              <nav>
+                <Link
+                  style={{
+                    boxShadow: 0,
+                    color: "white",
+                    textDecoration: "none",
+                    marginRight: 20,
+                  }}
+                  to="/"
+                >
+                  HOME
+                </Link>
+                <FooterButton onClick={() => window.history.back()}>
+                  BACK
+                </FooterButton>
+              </nav>
             </div>
           </>
         )}
