@@ -56,7 +56,7 @@ class BlogIndex extends React.Component {
                   <article>
                     <header>
                       <h3 style={{ margin: 0, marginBottom: "3%" }}>
-                        <Link style={{ boxShadow: `none` }} to={tagPath}>
+                        <Link style={{ boxShadow: `none` }} to={`${tagPath}/${tag}`}>
                           {tag} ({totalCount})
                         </Link>
                       </h3>
