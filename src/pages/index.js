@@ -55,11 +55,11 @@ class BlogIndex extends React.Component {
                 <li key={tagPath}>
                   <article>
                     <header>
-                      <h3 style={{ margin: 0, marginBottom: "3%" }}>
+                      <p style={{ margin: 0, marginBottom: "3%" }}>
                         <Link style={{ boxShadow: `none` }} to={`${tagPath}/${tag}`}>
                           {tag} ({totalCount})
                         </Link>
-                      </h3>
+                      </p>
                     </header>
                   </article>
                 </li>
@@ -68,11 +68,11 @@ class BlogIndex extends React.Component {
             <li>
               <article>
                 <header>
-                  <h3 style={{ margin: 0, marginBottom: "3%" }}>
+                  <p style={{ margin: 0, marginBottom: "3%" }}>
                     <Link style={{ boxShadow: `none` }} to="tags">
                       All Tags ({tags.length})
                     </Link>
-                  </h3>
+                  </p>
                 </header>
               </article>
             </li>
