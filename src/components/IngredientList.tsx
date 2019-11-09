@@ -13,7 +13,7 @@ export const IngredientList = ({ ingredients }: IProps) => {
   const isSelected = index => selectedIds.indexOf(index) !== -1
 
   return (
-    <ul>
+    <ul className='nes-list is-circle'>
       {ingredients.map((ingredient, index) => (
         <li
           key={`${ingredient}-${index}`}

@@ -37,6 +37,7 @@ class BlogPostTemplate extends React.Component {
 
               <h2>Tags</h2>
               <ul
+                className="nes-list is-circle"
                 style={{
                   listStyle: "none",
                   display: "flex",

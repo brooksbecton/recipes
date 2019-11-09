@@ -19,7 +19,7 @@ const TagsPage = ({
     <SEO title="tags" />
     <div className="nes-container with-title">
       <h1 className="title">Tags</h1>
-      <ul>
+      <ul className="nes-list is-circle">
         {group.map(tag => (
           <li key={tag.fieldValue}>
             <Link to={`/tags/${kebabCase(tag.fieldValue)}/`}>
