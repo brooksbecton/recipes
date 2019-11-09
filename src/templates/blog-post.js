@@ -20,7 +20,10 @@ class BlogPostTemplate extends React.Component {
             backgroundColor: "#22252b",
           }}
         >
-          <FavoriteButton slug={this.props.pageContext.slug} />
+          <FavoriteButton
+            style={{ marginLeft: "auto", paddingRight: "15px" }}
+            slug={this.props.pageContext.slug}
+          />
         </div>
         <Layout location={this.props.location} title={siteTitle}>
           <SEO
