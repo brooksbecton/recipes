@@ -16,6 +16,7 @@ export const IngredientList = ({ ingredients }: IProps) => {
     <ul>
       {ingredients.map((ingredient, index) => (
         <li
+          key={`${ingredient}-${index}`}
           style={
             isSelected(index)
               ? {
