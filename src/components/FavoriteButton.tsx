@@ -1,27 +1,19 @@
 import * as React from "react"
+import { useLocalStorage } from "./../utils/useLocalStorage"
 
 export interface IProps {
   slug: string
 }
 
 export const FavoriteButton: React.FC<IProps> = ({ slug }) => {
-  const [isFavorite, setIsFavorite] = React.useState(getFavorite(slug) !== null)
+  const favoriteRecipeKey = `favorites${slug}`
 
-  function deleteFavorite(recipeSlug: string) {
-    return localStorage.removeItem(`favorites${recipeSlug}`)
-  }
-  function storeFavorite(recipeSlug: string) {
-    return localStorage.setItem(`favorites${recipeSlug}`, recipeSlug)
-  }
-  function getFavorite(recipeSlug: string) {
-    return localStorage.getItem(`favorites${recipeSlug}`)
-  }
-
+  const [isFavorited, setIsFavorited] = useLocalStorage(
+    favoriteRecipeKey,
+    false
+  )
   function handlePress() {
-    setIsFavorite(prevIsFavorite => {
-      prevIsFavorite ? deleteFavorite(slug) : storeFavorite(slug)
-      return !prevIsFavorite
-    })
+    setIsFavorited(!isFavorited)
   }
 
   return (
@@ -29,7 +21,7 @@ export const FavoriteButton: React.FC<IProps> = ({ slug }) => {
       style={{ backgroundColor: "transparent", border: 0 }}
       onClick={handlePress}
     >
-      {isFavorite ? (
+      {isFavorited ? (
         <i className="nes-icon heart"></i>
       ) : (
         <i className="nes-icon heart is-empty"></i>
