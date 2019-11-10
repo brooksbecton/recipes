@@ -1,5 +1,5 @@
 import React, { useState } from "react"
-
+import { useLocalStorage } from "./../utils/useLocalStorage"
 interface IProps {
   ingredients: string[]
 }
@@ -9,11 +9,23 @@ function distinct(arr) {
 }
 
 export const IngredientList = ({ ingredients }: IProps) => {
-  const [selectedIds, setSelectedIds] = useState([])
-  const isSelected = index => selectedIds.indexOf(index) !== -1
+  const ListKey = `Ingredients/${typeof window !== "undefined" &&
+    window.location}`
+  const [selectedIds, setSelectedIds] = useLocalStorage(ListKey, [])
+  const isSelected = (index: number) => selectedIds.indexOf(index) !== -1
+
+  const handlePress = (index: number) => {
+    setSelectedIds(prevSelectedIds => {
+      if (isSelected(index)) {
+        return prevSelectedIds.filter(id => id !== index)
+      } else {
+        return distinct([...prevSelectedIds, index])
+      }
+    })
+  }
 
   return (
-    <ul className='nes-list is-circle'>
+    <ul className="nes-list is-circle">
       {ingredients.map((ingredient, index) => (
         <li
           key={`${ingredient}-${index}`}
@@ -24,15 +36,7 @@ export const IngredientList = ({ ingredients }: IProps) => {
                 }
               : {}
           }
-          onClick={() =>
-            setSelectedIds(prevSelectedIds => {
-              if (isSelected(index)) {
-                return prevSelectedIds.filter(id => id !== index)
-              } else {
-                return distinct([...prevSelectedIds, index])
-              }
-            })
-          }
+          onClick={() => handlePress(index)}
         >
           {ingredient}
         </li>
