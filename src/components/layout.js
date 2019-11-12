@@ -1,6 +1,7 @@
 import React, { useState } from "react"
 import { Link } from "gatsby"
 
+import Search from "./../components/search"
 import "./layout.css"
 
 const FooterButton = props => {
@@ -43,9 +44,9 @@ const Layout = ({ children }) => {
         style={{
           display: "flex",
           position: "fixed",
-          flexDirection: "row ",
+          flexDirection: isShowingSearch ? "column-reverse" : "row",
           justifyContent: "space-between",
-          height: "60px",
+          height: isShowingSearch ? "90%" : "60px",
           bottom: 0,
           width: "100%",
           margin: 0,
@@ -54,14 +55,13 @@ const Layout = ({ children }) => {
       >
         {isShowingSearch ? (
           <>
-            {" "}
-            <input
-              className="nes-input"
-              type="text"
-              name="search"
-              placeholder="SEARCH"
-            />{" "}
             <button onClick={() => setIsShowingSearch(false)}>CANCEL</button>
+            <Search
+              collapse
+              indices={[
+                { name: `recipes`, title: `Recipes`, hitComp: `PostHit` },
+              ]}
+            />
           </>
         ) : (
           <>
