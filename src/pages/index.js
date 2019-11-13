@@ -52,7 +52,7 @@ class BlogIndex extends React.Component {
               const tag = fieldValue
               const tagPath = `/tags/`
               return (
-                <li key={tagPath}>
+                <li key={tagPath + tag}>
                   <article>
                     <header>
                       <p style={{ margin: 0, marginBottom: "3%" }}>
@@ -72,7 +72,7 @@ class BlogIndex extends React.Component {
               <article>
                 <header>
                   <p style={{ margin: 0, marginBottom: "3%" }}>
-                    <Link style={{ boxShadow: `none` }} to="tags">
+                    <Link style={{ boxShadow: `none` }} to="/tags">
                       All Tags ({tags.length})
                     </Link>
                   </p>
