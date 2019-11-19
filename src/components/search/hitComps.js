@@ -11,7 +11,6 @@ export const PageHit = clickHandler => ({ hit }) => (
         <Highlight attribute="title" hit={hit} tagName="mark" />
       </h4>
     </Link>
-    <Snippet attribute="excerpt" hit={hit} tagName="mark" />
   </div>
 )
 
@@ -27,6 +26,7 @@ export const PostHit = clickHandler => ({ hit }) => (
       &nbsp;
       <Highlight attribute="date" hit={hit} tagName="mark" />
       &emsp;
+      <br/>
       <Tags size="1em" />
       &nbsp;
       {hit.tags.map((tag, index) => (
@@ -36,6 +36,5 @@ export const PostHit = clickHandler => ({ hit }) => (
         </Fragment>
       ))}
     </div>
-    <Snippet attribute="excerpt" hit={hit} tagName="mark" />
   </div>
 )

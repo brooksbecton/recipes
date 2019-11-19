@@ -1,5 +1,7 @@
 import React, { useState } from "react"
 import { Link } from "gatsby"
+import { Dialog, DialogOverlay, DialogContent } from "@reach/dialog"
+import VisuallyHidden from "@reach/visually-hidden"
 
 import Search from "./../components/search"
 import "./layout.css"
@@ -29,6 +31,45 @@ const Layout = ({ children }) => {
         marginBottom: "2%",
       }}
     >
+      <Dialog
+        isOpen={isShowingSearch}
+        onDismiss={() => setIsShowingSearch(false)}
+        style={{
+          position: "fixed",
+          top: 0,
+          height: "100vh",
+          width: "100vw",
+          backgroundColor: "white",
+          padding: 20,
+          overflowY: "scroll",
+        }}
+      >
+        <div>
+          <Search
+            collapse
+            indices={[
+              { name: `recipes`, title: `Recipes`, hitComp: `PostHit` },
+            ]}
+          />
+          <button
+            style={{
+              border: "none",
+              backgroundColor: "blue",
+              color: "white",
+              opacity: 0.9,
+              position: "fixed",
+              bottom: 15,
+              right: 15,
+              borderRadius: "80%",
+              width: "60px",
+              height: "60px",
+            }}
+            onClick={() => setIsShowingSearch(false)}
+          >
+            X
+          </button>
+        </div>
+      </Dialog>
       <div
         style={{
           marginLeft: `auto`,
@@ -44,34 +85,32 @@ const Layout = ({ children }) => {
         style={{
           display: "flex",
           position: "fixed",
-          flexDirection: isShowingSearch ? "column-reverse" : "row",
+          flexDirection: "row",
           justifyContent: "space-between",
-          height: isShowingSearch ? "90%" : "60px",
+          height: "60px",
           bottom: 0,
           width: "100%",
           margin: 0,
-          padding: isShowingSearch ? 5 : 16,
+          padding: 16,
         }}
       >
-        {isShowingSearch ? (
+        {
           <>
-            <button onClick={() => setIsShowingSearch(false)}>CANCEL</button>
-            <Search
-              collapse
-              indices={[
-                { name: `recipes`, title: `Recipes`, hitComp: `PostHit` },
-              ]}
-            />
-          </>
-        ) : (
-          <>
-            <FooterButton
-              onClick={() =>
-                setIsShowingSearch(prevIsShowingSearch => !prevIsShowingSearch)
-              }
-            >
-              SEARCH
-            </FooterButton>
+            {isShowingSearch ? (
+              <FooterButton onClick={() => setIsShowingSearch(false)}>
+                CANCEL
+              </FooterButton>
+            ) : (
+              <FooterButton
+                onClick={() =>
+                  setIsShowingSearch(
+                    prevIsShowingSearch => !prevIsShowingSearch
+                  )
+                }
+              >
+                SEARCH
+              </FooterButton>
+            )}
             <div
               style={{
                 alignSelf: "center",
@@ -97,7 +136,7 @@ const Layout = ({ children }) => {
               </nav>
             </div>
           </>
-        )}
+        }
       </footer>
     </div>
   )

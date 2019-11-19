@@ -54,8 +54,12 @@ export default function Search({ indices, collapse, hitsAsGrid }) {
       onSearchStateChange={({ query }) => setQuery(query)}
       root={{ Root, props: { ref } }}
     >
-      <Input onFocus={() => setFocus(true)} {...{ collapse, focus }} />
-      <div style={{ overflow: "scroll" }}>
+        <Input
+          onFocus={() => setFocus(true)}
+          {...{ collapse, focus }}
+        />
+
+      <div>
         {indices.map(({ name, title, hitComp }) => (
           <Index key={name} indexName={name}>
             <header>
