@@ -25,7 +25,7 @@ export const IngredientList = ({ ingredients }: IProps) => {
   }
 
   return (
-    <ul className="nes-list is-circle">
+    <ul>
       {ingredients.map((ingredient, index) => (
         <li
           key={`${ingredient}-${index}`}

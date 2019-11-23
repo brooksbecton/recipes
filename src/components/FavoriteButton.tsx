@@ -18,14 +18,15 @@ export const FavoriteButton: React.FC<IProps> = ({ slug }) => {
 
   return (
     <button
+      aria-label='Favorite Current Recipe'
       style={{ backgroundColor: "transparent", border: 0 }}
       onClick={handlePress}
     >
       {isFavorited ? (
-        <i className="nes-icon heart"></i>
+        "s"
       ) : (
-        <i className="nes-icon heart is-empty"></i>
-      )}
+          ""
+        )}
     </button>
   )
 }

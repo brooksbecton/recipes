@@ -17,9 +17,9 @@ const TagsPage = ({
 }) => (
   <Layout location={location} title={title}>
     <SEO title="tags" />
-    <div className="nes-container with-title">
-      <h1 className="title">Tags</h1>
-      <ul className="nes-list is-circle">
+    <div>
+      <h1>Tags</h1>
+      <ul>
         {group.map(tag => (
           <li key={tag.fieldValue}>
             <Link to={`/tags/${kebabCase(tag.fieldValue)}/`}>

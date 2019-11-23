@@ -5,6 +5,7 @@ import { MDXRenderer } from "gatsby-plugin-mdx"
 import { FavoriteButton } from "../components/FavoriteButton"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
+import { Tag } from "../components/Tag"
 
 class BlogPostTemplate extends React.Component {
   render() {
@@ -37,7 +38,6 @@ class BlogPostTemplate extends React.Component {
 
               <h2>Tags</h2>
               <ul
-                className="nes-list is-circle"
                 style={{
                   listStyle: "none",
                   display: "flex",
@@ -54,9 +54,9 @@ class BlogPostTemplate extends React.Component {
                           border: "none",
                         }}
                       >
-                        <Link to={`/tags/`}>{`${tag}${
-                          index === array.length - 1 ? "" : ", "
-                        } `}</Link>
+                        <Link to={`/tags/`}>
+                          <Tag>{`${tag}`}</Tag>
+                        </Link>
                       </li>
                     )
                   }

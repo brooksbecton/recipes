@@ -17,7 +17,7 @@ const Tags = ({ pageContext, data, location }) => {
   return (
     <Layout location={location} title={siteTitle}>
       <h1>{tagHeader}</h1>
-      <ul className="nes-list is-circle">
+      <ul>
         {edges.map(({ node }) => {
           const { slug } = node.fields
           const { title } = node.frontmatter

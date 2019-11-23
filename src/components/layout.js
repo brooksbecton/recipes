@@ -72,7 +72,7 @@ const Layout = ({ children }) => {
           <main>{children}</main>
         </div>
       </div>
-      <footer className="flex flex-row  mt-0 fixed w-full z-10 bottom-0 text-white bg-green-600 p-2">
+      <footer className="flex flex-row  mt-0 fixed w-full z-10 bottom-0 text-white bg-green-900 p-2">
         {
           <>
             {isShowingSearch ? (
