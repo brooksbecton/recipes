@@ -11,6 +11,7 @@ export const PageHit = clickHandler => ({ hit }) => (
         <Highlight attribute="title" hit={hit} tagName="mark" />
       </h4>
     </Link>
+    <Snippet attribute="excerpt" hit={hit} tagName="mark" />
   </div>
 )
 
@@ -36,5 +37,6 @@ export const PostHit = clickHandler => ({ hit }) => (
         </Fragment>
       ))}
     </div>
+    <Snippet attribute="excerpt" hit={hit} tagName="mark" />
   </div>
 )

@@ -16,7 +16,7 @@ class BlogIndex extends React.Component {
         <SEO title="All posts" />
 
         <div
-          className="nes-container with-title"
+          className="container"
           style={{ marginBottom: "60px" }}
         >
           <h2 className="title">Recent Recipes</h2>
@@ -27,14 +27,14 @@ class BlogIndex extends React.Component {
                 <li key={node.fields.slug}>
                   <article>
                     <header>
-                      <h3 style={{ margin: 0, marginBottom: "3%" }}>
+                      <p style={{ margin: 0, marginBottom: "3%" }}>
                         <Link
                           style={{ boxShadow: `none` }}
                           to={node.fields.slug}
                         >
                           {title}
                         </Link>
-                      </h3>
+                      </p>
                     </header>
                   </article>
                 </li>
@@ -43,7 +43,7 @@ class BlogIndex extends React.Component {
           </ul>
         </div>
         <div
-          className="nes-container with-title"
+          className="container"
           style={{ marginBottom: "60px" }}
         >
           <h2 className="title">Tags</h2>
