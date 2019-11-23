@@ -27,7 +27,7 @@ const Layout = ({ children }) => {
   const [isShowingSearch, setIsShowingSearch] = useState(false)
   return (
     <div>
-      <div className="mx-auto p-6 mb-12">
+      <div className="mx-auto p-6 md:pr-32 md:pl-32  mb-12">
         <Dialog
           aria-label="Search Site Form"
           isOpen={isShowingSearch}
