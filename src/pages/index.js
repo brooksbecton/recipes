@@ -17,17 +17,17 @@ class BlogIndex extends React.Component {
         <SEO title="All posts" />
 
         <div className="flex flex-col-reverse lg:flex-row">
-          <div className="lg:pr-12 lg:w-1/4">
+          <div className="lg:pr-12 lg:w-1/3">
             <h2>Tags</h2>
             <ul>
               {tags.slice(0, 9).map(({ fieldValue, totalCount }) => {
                 const tag = fieldValue
                 const tagPath = `/tags/`
                 return (
-                  <li key={tagPath + tag}>
+                  <li className="m-5" key={tagPath + tag}>
                     <article>
                       <header>
-                        <Link style={{ boxShadow: `none` }} to={`/`}>
+                        <Link style={{ boxShadow: `none` }} to={`/tags/${tag}`}>
                           <Tag>
                             #{tag} ({totalCount})
                           </Tag>
@@ -62,7 +62,7 @@ class BlogIndex extends React.Component {
                 const title = node.frontmatter.title || node.fields.slug
                 return (
                   <li className="lg:1/5 lg:p-5" key={node.fields.slug}>
-                    <article className="mb-6 p-5 max-w-sm rounded overflow-hidden shadow-lg">
+                    <article className="mb-6 p-5 max-w-sm rounded overflow-hidden hover:shadow-2xl shadow-lg">
                       <header>
                         <p className="font-bold text-xl mb-2">
                           <Link
@@ -80,7 +80,14 @@ class BlogIndex extends React.Component {
                       </Link>
                       <div>
                         {node.frontmatter.tags.map(tag => {
-                          return <Tag key={tag}>#{tag}</Tag>
+                          return (
+                            <Link
+                              style={{ boxShadow: `none` }}
+                              to={`/tags/${tag}`}
+                            >
+                              <Tag key={tag}>#{tag}</Tag>
+                            </Link>
+                          )
                         })}
                       </div>
                     </article>
