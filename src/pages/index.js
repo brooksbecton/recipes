@@ -5,6 +5,8 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 import { Tag } from "../components/Tag"
 
+import './index.css'
+
 class BlogIndex extends React.Component {
   render() {
     const { data } = this.props

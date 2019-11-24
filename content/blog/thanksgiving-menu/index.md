@@ -37,11 +37,25 @@ tags: ["one-off"]
   
 
 
-- Cranberry Sauce
-- Rolls
-- Deviled Eggs\*
-- Stuffing
+- ~~Cranberry Sauce~~
+- ~~Rolls~~
+- [Deviled Eggs](https://www.foodnetwork.com/recipes/classic-deviled-eggs-recipe-1911032)\*
+  - ~~6 Eggs~~
+  - ~~Mayo~~
+  - ~~Mustard~~
+- [Stuffing](https://www.bonappetit.com/recipe/the-new-classic-stuffing)
+  - ~~Bread~~
+  - ~~Sausage~~
+  - ~~Celery~~
+  - ~~Onions~~
+  - ~~2 Eggs~~
+  - Sage
+  - White Wine
 - [Green Bean casserole](https://www.allrecipes.com/recipe/219077/chef-johns-perfect-mashed-potatoes/)\*
+  - ~~Mushroom Soup~~
+  - ~~Soy Sauce~~
+  - ~~French Fried Onions~~
+  - Green Beans
 - Turkey
 - [Roasted Carrots](https://sweetpeasandsaffron.com/make-ahead-honey-roasted-carrots/)\*
 - [Gravy](https://www.bonappetit.com/recipe/make-ahead-gravy)\*
