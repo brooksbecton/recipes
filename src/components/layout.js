@@ -27,7 +27,7 @@ const Layout = ({ children }) => {
   const [isShowingSearch, setIsShowingSearch] = useState(false)
   return (
     <div>
-      <div className="mx-auto p-6 md:pr-32 md:pl-32  mb-12">
+      <div className="mx-auto p-6 lg:pr-42 lg:pl-42 md:pr-32 md:pl-32  mb-12">
         <Dialog
           aria-label="Search Site Form"
           isOpen={isShowingSearch}
@@ -72,9 +72,9 @@ const Layout = ({ children }) => {
           <main>{children}</main>
         </div>
       </div>
-      <footer className="flex flex-row  mt-0 fixed w-full z-10 bottom-0 text-white bg-green-900 p-2">
+      <footer className="lg:pl-9 mt-0 fixed w-full z-10 bottom-0 text-white bg-green-900 p-2">
         {
-          <>
+          <nav className="flex flex-row lg:justify-start justify-around">
             {isShowingSearch ? (
               <FooterButton onClick={() => setIsShowingSearch(false)}>
                 CANCEL
@@ -90,17 +90,13 @@ const Layout = ({ children }) => {
                 SEARCH
               </FooterButton>
             )}
-            <div>
-              <nav>
-                <Link className="m-6 text-white" to="/">
-                  HOME
-                </Link>
-                <FooterButton onClick={() => window.history.back()}>
-                  BACK
-                </FooterButton>
-              </nav>
-            </div>
-          </>
+            <Link className="m-6 text-white" to="/">
+              HOME
+            </Link>
+            <FooterButton onClick={() => window.history.back()}>
+              BACK
+            </FooterButton>
+          </nav>
         }
       </footer>
     </div>

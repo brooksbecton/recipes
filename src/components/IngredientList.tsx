@@ -28,12 +28,13 @@ export const IngredientList = ({ ingredients }: IProps) => {
     <ul>
       {ingredients.map((ingredient, index) => (
         <li
+          className="mb-3 cursor-pointer"
           key={`${ingredient}-${index}`}
           style={
             isSelected(index)
               ? {
-                  textDecoration: "line-through",
-                }
+                textDecoration: "line-through",
+              }
               : {}
           }
           onClick={() => handlePress(index)}

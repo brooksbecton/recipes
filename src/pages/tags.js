@@ -5,6 +5,7 @@ import kebabCase from "lodash/kebabCase"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
+import { Tag } from "../components/Tag"
 
 const TagsPage = ({
   location,
@@ -21,9 +22,11 @@ const TagsPage = ({
       <h1>Tags</h1>
       <ul>
         {group.map(tag => (
-          <li key={tag.fieldValue}>
+          <li className="mb-3" key={tag.fieldValue}>
             <Link to={`/tags/${kebabCase(tag.fieldValue)}/`}>
-              {tag.fieldValue} ({tag.totalCount})
+              <Tag>
+                {tag.fieldValue} ({tag.totalCount})
+              </Tag>
             </Link>
           </li>
         ))}

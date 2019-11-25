@@ -14,17 +14,8 @@ class BlogPostTemplate extends React.Component {
 
     return (
       <div>
-        <div
-          style={{
-            display: "flex",
-            alignItems: "flex-end",
-            backgroundColor: "#22252b",
-          }}
-        >
-          <FavoriteButton
-            style={{ marginLeft: "auto", paddingRight: "15px" }}
-            slug={this.props.pageContext.slug}
-          />
+        <div>
+          <FavoriteButton slug={this.props.pageContext.slug} />
         </div>
         <Layout location={this.props.location} title={siteTitle}>
           <SEO
@@ -34,36 +25,34 @@ class BlogPostTemplate extends React.Component {
 
           <article>
             <header>
-              <h1>{post.frontmatter.title}</h1>
+              <h1 className="text-green-900">{post.frontmatter.title}</h1>
 
-              <h2>Tags</h2>
-              <ul
-                style={{
-                  listStyle: "none",
-                  display: "flex",
-                  flexDirection: "column",
-                  margin: 0,
-                }}
-              >
-                {this.props.data.mdx.frontmatter.tags.map(
-                  (tag, index, array) => {
-                    return (
-                      <li
-                        key={tag}
-                        style={{
-                          border: "none",
-                        }}
-                      >
-                        <Link to={`/tags/`}>
-                          <Tag>{`${tag}`}</Tag>
-                        </Link>
-                      </li>
-                    )
-                  }
-                )}
-              </ul>
+              <div className="flex flex-row w-auto">
+                <h2 className="text-base text-green-900 m-0 mr-4 pt-1 ">
+                  Tags
+                </h2>
+                <ul className="flex flex-row">
+                  {this.props.data.mdx.frontmatter.tags.map(
+                    (tag, index, array) => {
+                      return (
+                        <li
+                          className="mb-3 mr-4"
+                          key={tag}
+                          style={{
+                            border: "none",
+                          }}
+                        >
+                          <Link to={`/tags/`}>
+                            <Tag>{tag}</Tag>
+                          </Link>
+                        </li>
+                      )
+                    }
+                  )}
+                </ul>
+              </div>
             </header>
-
+            <hr className='text-green-900'/>
             <MDXRenderer>{post.body}</MDXRenderer>
           </article>
         </Layout>

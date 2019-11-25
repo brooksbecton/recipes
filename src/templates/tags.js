@@ -1,6 +1,7 @@
 import React from "react"
 import PropTypes from "prop-types"
 import Layout from "../components/layout"
+import { Tag } from "../components/Tag"
 
 // Components
 import { Link, graphql } from "gatsby"
@@ -22,8 +23,10 @@ const Tags = ({ pageContext, data, location }) => {
           const { slug } = node.fields
           const { title } = node.frontmatter
           return (
-            <li key={slug}>
-              <Link to={slug}>{title}</Link>
+            <li className='mb-3' key={slug}>
+              <Tag>
+                <Link to={slug}>{title}</Link>
+              </Tag>
             </li>
           )
         })}

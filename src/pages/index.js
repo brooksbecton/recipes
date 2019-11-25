@@ -19,7 +19,7 @@ class BlogIndex extends React.Component {
         <SEO title="All posts" />
 
         <div className="flex flex-col-reverse lg:flex-row">
-          <div className="lg:pr-12 lg:w-1/3">
+          <div className="lg:pr-12 lg:w-1/3 md:w-1/2 ">
             <h2>Tags</h2>
             <ul>
               {tags.slice(0, 9).map(({ fieldValue, totalCount }) => {
@@ -31,7 +31,7 @@ class BlogIndex extends React.Component {
                       <header>
                         <Link style={{ boxShadow: `none` }} to={`/tags/${tag}`}>
                           <Tag>
-                            #{tag} ({totalCount})
+                              {tag} ({totalCount})
                           </Tag>
                         </Link>
                       </header>
@@ -59,7 +59,7 @@ class BlogIndex extends React.Component {
 
           <div>
             <h2>Recent Recipes</h2>
-            <ul className="lg:flex lg:flex-row lg:w-full lg:flex-wrap ">
+            <ul className="lg:flex lg:flex-row lg:w-full md:w-1/2 lg:flex-wrap ">
               {posts.slice(0, 9).map(({ node }) => {
                 const title = node.frontmatter.title || node.fields.slug
                 return (
@@ -87,7 +87,7 @@ class BlogIndex extends React.Component {
                               style={{ boxShadow: `none` }}
                               to={`/tags/${tag}`}
                             >
-                              <Tag key={tag}>#{tag}</Tag>
+                              <Tag key={tag}>{tag}</Tag>
                             </Link>
                           )
                         })}
