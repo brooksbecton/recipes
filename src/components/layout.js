@@ -90,7 +90,7 @@ const Layout = ({ children }) => {
                 SEARCH
               </FooterButton>
             )}
-            <Link className="m-6 text-white" to="/">
+            <Link className="m-2 text-white" to="/">
               HOME
             </Link>
             <FooterButton onClick={() => window.history.back()}>
