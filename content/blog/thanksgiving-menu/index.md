@@ -4,77 +4,48 @@ date: "2019-10-23T14:15:04+00:00"
 tags: ["one-off"]
 ---
 
-4-5 Adults, 2 children
-
-## Tuesday
-
-- Pizza x2
-
 ## Wednesday
 
-### Breakfast
+1. [Stuffing](https://www.bonappetit.com/recipe/the-new-classic-stuffing)
+1. [Deviled Eggs](https://www.foodnetwork.com/recipes/classic-deviled-eggs-recipe-1911032)
+1. [Bourbon Pecan Pie](https://www.tasteofhome.com/recipes/easy-bourbon-pecan-pie/)
+1. Pizza
 
-- Breakfast Casserole
+## Thursday
 
-### Thanksgiving
+1. Breakfast Casserole
+1. Cheese Plate
 
-- Cheese Plate
-  - Olives
-  - Crackers
-  - Bread
-  - Cheese
-    - Brie
-    - Smoked Gouda
-    - Parmeasean/Manchago
-    - Goat Cheese 
-  - Pepporini 
-  - Salami
-  - Garlic Honey
-  - Hot Honey
-  - Almonds
-  - Walnuts
-  - Pickles
-  
+### Oven 
+- Oven A
+  1. [Turkey](https://www.bonappetit.com/recipe/dry-rubbed-roast-turkey)
+      - Oven
+        - 400/350 degrees
+        - 2 hours
+- Oven B  
+  1. [Green Bean casserole](https://www.campbells.com/kitchen/recipes/classic-green-bean-casserole/)
+      - Oven
+        - 350 degrees
+        - 30 minutes
+  1. Finish Stuffing
+      - Oven
+          - 350 degrees
+            - 30 minutes
+          - 450 degrees
+            - 30 minutes
+- Oven C
+  1. [Roasted Carrots](https://sweetpeasandsaffron.com/make-ahead-honey-roasted-carrots/)
+      - Oven 
+        - 400 degrees
+        - 30 minutes
+  1. Rolls - 350 degrees, 5-10 minutes
 
+### Stove Top
+1. [Gravy](https://www.bonappetit.com/recipe/make-ahead-gravy)
+1. [Mashed Potatoes](https://www.allrecipes.com/recipe/219077/chef-johns-perfect-mashed-potatoes/)
 
-- ~~Cranberry Sauce~~
-- ~~Rolls~~
-- [Deviled Eggs](https://www.foodnetwork.com/recipes/classic-deviled-eggs-recipe-1911032)\*
-  - ~~6 Eggs~~
-  - ~~Mayo~~
-  - ~~Mustard~~
-- [Stuffing](https://www.bonappetit.com/recipe/the-new-classic-stuffing)
-  - ~~Bread~~
-  - ~~Sausage~~
-  - ~~Celery~~
-  - ~~Onions~~
-  - ~~2 Eggs~~
-  - Sage
-  - White Wine
-- [Green Bean casserole](https://www.allrecipes.com/recipe/219077/chef-johns-perfect-mashed-potatoes/)\*
-  - ~~Mushroom Soup~~
-  - ~~Soy Sauce~~
-  - ~~French Fried Onions~~
-  - Green Beans
-- Turkey
-- [Roasted Carrots](https://sweetpeasandsaffron.com/make-ahead-honey-roasted-carrots/)\*
-- [Gravy](https://www.bonappetit.com/recipe/make-ahead-gravy)\*
-- [Mashed Potatoes](https://www.allrecipes.com/recipe/219077/chef-johns-perfect-mashed-potatoes/)\*
-- Bourbon Pecan Pie\*
-- Wine
-  - Vino Verde
-  - Merlot/Pinot 
 
 ## Friday
 
-- Pancakes
+- [Pancakes](/banana-pancakes/)
 - Leftovers
-
-
-## Misc
-
-- Choco Milk
-- Pumpkin Bread
-
-
-\* _Make ahead_
