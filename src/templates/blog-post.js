@@ -42,7 +42,7 @@ class BlogPostTemplate extends React.Component {
                             border: "none",
                           }}
                         >
-                          <Link to={`/tags/`}>
+                          <Link to={`/tags/${tag}`}>
                             <Tag>{tag}</Tag>
                           </Link>
                         </li>
