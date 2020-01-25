@@ -1,0 +1,2 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[5],{"2l/u":function(t,e,o){"use strict";o.r(e);var r=o("q1tI"),n=o("Bl7J"),p=o("vrFN");var c=function(t){var e,o;function c(){return t.apply(this,arguments)||this}return o=t,(e=c).prototype=Object.create(o.prototype),e.prototype.constructor=e,e.__proto__=o,c.prototype.render=function(){return r.createElement(n.a,null,r.createElement(p.a,{title:"About Brooks Becton"}),r.createElement("h1",null,"Brooks Becton"))},c}(r.Component);e.default=c}}]);
+//# sourceMappingURL=component---src-pages-about-tsx-f561d03fdb23fa53f532.js.map
