@@ -60,51 +60,6 @@ class BlogIndex extends React.Component {
       <Layout location={this.props.location} title={siteTitle}>
         <SEO title="All posts" />
 
-        <div className="">
-          <h2>To Try</h2>
-
-          <ul className="flex flex-row overflow-x-scroll">
-            <li>
-              <Card
-                title="Carbonara Stracciatella"
-                desc={
-                  <>
-                    <p>Italian Parmesan Soup</p>
-                    <p className="italic">"Where Cooking Begins" page 130</p>
-                  </>
-                }
-              />
-            </li>
-            <li>
-              <Card
-                title=" BLTs with Bacon Fat Fried Eggs"
-                desc={<p className="italic">"Where Cooking Begins" page 118</p>}
-              />
-            </li>
-            <li>
-              <Card
-                title=" Slow Cooked Dozen Egg Frittata"
-                desc={
-                  <>
-                    <p>Blonde Frittata With Honey Nut Squash and Kale</p>
-                    <p className="italic">"Where Cooking Begins" page 116</p>
-                  </>
-                }
-              />
-            </li>
-            <li>
-              <Card
-                title="Pasta with Cauliflower, Sausage, and Bread Crumbs"
-                desc={<p className="italic">"Where Cooking Begins" page 140</p>}
-              />
-            </li>
-            <li>
-              <Card title="Dutch Oven Bread" />
-            </li>
-            <li>
-              <Card title="Dutch Oven Roast" />
-            </li>
-          </ul>
           <div className="flex flex-col-reverse lg:flex-row">
             <div className="lg:pr-12 lg:w-1/3 md:w-1/2 ">
               <h2>Tags</h2>
